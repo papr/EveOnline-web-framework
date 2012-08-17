@@ -4,7 +4,7 @@ $db = new db;
 $details = $db->pullData('charID','users',FALSE,FALSE,array('charName'=>$_POST['username'],'password'=>sha1($_POST['password'])));
 if($details){
 $_SESSION['charID'] = $details[0]['charID'];
-die(header('location:index.php'));
+die(header('location:../index.php'));
 }else{
 @$notice = "Incorrect username or password..";
 }
