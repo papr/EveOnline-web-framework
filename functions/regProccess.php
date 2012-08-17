@@ -7,8 +7,8 @@ $insert = $db->insertData('users',$details);
 
 if($insert){
 $_SESSION['charID'] = $_SERVER['HTTP_EVE_CHARID'];
-die(header('location:index.php'));
+die(header('location:../index.php'));
 }else{
-die(header('location:register.php'));
+die(header('location:../register.php'));
 }
 ?>
